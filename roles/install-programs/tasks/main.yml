@@ -1,0 +1,10 @@
+---
+- name: Instalando docker
+  become: yes
+  import_tasks: docker.yml
+  tags: task-install-programs-docker
+
+- name: Instalando docker compose
+  become: yes
+  import_tasks: docker-compose.yml
+  tags: task-install-programs-docker-compose

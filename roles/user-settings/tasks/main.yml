@@ -1,0 +1,9 @@
+---
+- name: Copia .gitconfig 
+  copy: 
+    dest: "/home/{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: 0664
+    owner: "{{ ansible_user }}"
+    src: .gitconfig
+  tags: tasks-copy-gitconfig

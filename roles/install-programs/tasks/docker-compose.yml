@@ -1,0 +1,17 @@
+---
+- name: Instala docker-compose 1.25
+  get_url:
+    url: https://github.com/docker/compose/releases/download/1.25.4/docker-compose-Linux-x86_64
+    dest: /usr/local/bin/docker-compose
+    mode: 0755
+
+- name: Cria link simbolico do docker-compose
+  file:
+    src: "/usr/local/bin/docker-compose"
+    dest: "/usr/bin/docker-compose"
+    state: link
+    force: yes
+  
+- name: Activate the changes to groups
+  become: true
+  shell: "newgrp docker"

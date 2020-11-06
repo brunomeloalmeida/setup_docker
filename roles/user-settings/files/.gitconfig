@@ -1,0 +1,17 @@
+[branch]
+	autoSetupRebase = always
+
+[push]
+	default = current
+
+[pull]
+	rebase = true
+
+[color]
+  status = auto
+  branch = auto
+  interactive = auto
+  diff = auto	
+
+[core]
+	excludesfile = ~/.gitignore_global

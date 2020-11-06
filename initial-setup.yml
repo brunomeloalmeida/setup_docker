@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  connection: local
+  roles:
+    - { role: user-settings, tags: [role-user-settings] }
+    - { role: install-programs, tags: [role-install-programs] }
